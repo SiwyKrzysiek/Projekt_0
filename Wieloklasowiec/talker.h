@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-class talker
+class Talker
 {
     public:
         void speak();

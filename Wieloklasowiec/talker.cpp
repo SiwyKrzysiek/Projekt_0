@@ -1,6 +1,6 @@
-#include "talker.h"
+#include "Talker.h"
 
-void talker::speak()
+void Talker::speak()
 {
     std::cout << "Latac kazdy moze. Troche lepiej, troche gorzej." << std::endl;
 }
