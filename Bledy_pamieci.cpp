@@ -11,6 +11,7 @@ int main()
 {
     badMallock();
     freeToSoon();
+    loopedAlocation();
 
     return 0;
 }
@@ -37,19 +38,25 @@ void freeToSoon()
     const int SIZE = 5;
     int* tab = (int*) malloc(SIZE*sizeof(*tab));
 
-    {
-        for (int i=0; i<SIZE; i++)
+    for (int i=0; i<SIZE; i++)
         tab[i] = i+1;
-        /*...*/
-    } //Jakies operacje na tablicy
+
     free(tab);
 
-    cout << tab[2] << endl;
+    cout << tab[2] << endl; //Proba dostepu mimo zwolnienia pamieci
 }
 
 void loopedAlocation()
 {
+    const int SIZE = 5;
+    int* tab;
 
+    for (int i=0; i<SIZE; i++)
+    {
+        tab = (int*) malloc(SIZE*sizeof(*tab)); //Wywolanie wielokrotne malloc w pentli
+    }
+
+    free(tab);
 }
 
 
