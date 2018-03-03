@@ -1,5 +1,5 @@
-#include "Talker.h"
-#include "Counter.h"
+#include "talker.h"
+#include "counter.h"
 
 using namespace std;
 

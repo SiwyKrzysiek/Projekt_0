@@ -1,4 +1,4 @@
-#include "Counter.h"
+#include "counter.h"
 
 void Counter::count(int upTo)
 {
